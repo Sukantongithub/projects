@@ -1,0 +1,248 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f4f4; /* Added background color for body */
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: rgb(255, 145, 0);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+#hatlogo {
+    color: black;
+    font-size: 2rem;
+    transform: rotate(-45deg);
+}
+
+.reload {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.aictelogo {
+    width: 100px;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    margin-top: 60px; /* Adjust margin to account for the fixed header */
+    height: calc(100vh - 60px);
+}
+
+.navbar {
+    width: 20%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    top: 60px; /* Start below the fixed header */
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar .items {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.navbar .list {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .list:hover {
+    background-color: #555;
+    opacity: 0.8;
+}
+
+.navbar .list span {
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+.content {
+    margin-left: 20%; /* Account for the fixed sidebar width */
+    width: 80%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto; /* Added for scrolling content */
+}
+
+/* Profile Section */
+.profile-section,
+.settings-section,
+.application-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Increased width for more spacious forms */
+    margin-bottom: 20px; /* Added spacing between sections */
+}
+
+.profile-section .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.settings-section h2,
+.content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.settings-section label,
+.profile-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Form Styles */
+form {
+    width: 100%;
+    max-width: 500px; /* Increased max-width for wider forms */
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f4f4f4; /* Uniform background for inputs */
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: rgb(255, 145, 0);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 145, 0, 0.5); /* Added focus effect */
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(255, 145, 0);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Smooth button color transition */
+}
+
+form button:hover {
+    background-color: rgb(255, 132, 0);
+}
+
+form input[type="file"] {
+    border: none;
+    background-color: #fff;
+    padding: 8px; /* Adjusted padding for file inputs */
+}
+
+form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff; /* Improved appearance for dropdowns */
+}
+
+form input[type="number"] {
+    -moz-appearance: textfield; /* Removes spinner in Firefox */
+}
+
+form input[type="number"]::-webkit-outer-spin-button,
+form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Removes spinner in Chrome */
+}
+
+/* Additional Classes */
+.note {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Settings Section */
+.settings-section input[type="password"],
+.settings-section input[type="checkbox"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.settings-section input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+}
+
+.settings-section button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(255, 145, 0);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.settings-section button:hover {
+    background-color: rgb(255, 132, 0);
+}
