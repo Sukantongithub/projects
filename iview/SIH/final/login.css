@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+body {
+    min-height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(255, 145, 0);
+}
+#hatlogo {
+    color: black;
+    font-size: 2rem;
+    transform: rotate(-45deg);
+}
+.reload {
+    font-size: 1.7rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding: 15px 0 0 50px;
+    color: black;
+    text-decoration: none;
+}
+.aictelogo {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+.wrapper {
+    display: flex;
+    position: absolute;
+    height: 550px;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    overflow: hidden;
+}
+.poster {
+    background: url(https://t4.ftcdn.net/jpg/02/21/68/89/360_F_221688957_dbQ7h9CFvg2l1ZAOFuBsS2uc2R0AvPZP.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+.logoset {
+    margin: 0 0 0 7%;
+    backdrop-filter: blur(2px);
+}
+.loginset, .regset {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.pic {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px 0 0 160px;
+}
+.heading, .reghead {
+    margin: 180px 0 0 30px;
+    background-color: rgb(255, 132, 0);
+    padding: 2%;
+    text-align: center;
+}
+form {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 5%;
+}
+input {
+    height: 50px;
+    width: calc(100% - 60px);
+    font-size: 1.2rem;
+    font-family: "Nunito", sans-serif;
+    margin: 10px;
+    padding: 0 10px;
+    background: transparent;
+    border-radius: 30px;
+    border: 2px solid rgba(1, 1, 1, 0.542);
+}
+#phone::-webkit-inner-spin-button, #phone::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+input:focus {
+    background-color: rgba(197, 197, 197, 0.24);
+    border: 2px solid rgb(9, 255, 0);
+}
+#show {
+    position: absolute;
+    color: grey;
+    margin: 2.5% 0 0 -5%;
+    cursor: pointer;
+}
+button {
+    border: none;
+    color: aliceblue;
+    background: linear-gradient(45deg, rgba(255, 208, 133, 0.988), rgb(254, 157, 0));
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    width: 200px;
+    height: 60px;
+    margin: 5px 0 40px 112px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px rgb(0, 0, 0);
+    transition: transform 0.5s;
+}
+button:active {
+    transform: scale(0.9);
+}
+.forgot, .conset {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+#mailbox {
+    position: absolute;
+    margin-left: 100px;
+}
+.query {
+    display: flex;
+    justify-content: space-between;
+}
+.guidlines {
+    font-size: large;
+    margin: 40px 0 0 1080px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+.update {
+    position: absolute;
+    font-size: 1.5rem;
+    margin: 570px 0 0 0;
+    animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+.regbtn{
+    display: none;
+    position: absolute;
+    margin: 310px 0px 0px 458px ;
+    color: white;
+    background-color: rgba(0, 30, 255, 0.933);
+    font-size: 1.5rem;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px 20px 0px 0px;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+.regbtn::before,.regbtn::after{
+    position: absolute;
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 0px 0px 20px 0px;
+    left: -8.5%;
+    top: 75%;
+    box-shadow: 5px 1px 0px 0px  rgba(0, 30, 255, 0.933);
+}
+.regbtn::after{
+    left: 100%;
+    border-radius: 0px 0px 0px 20px;
+    box-shadow: -5px 3px 0px 0px  rgba(0, 30, 255, 0.933);
+}
+.logbtn{
+    display: none;
+    position: absolute;
+    margin: 260px 0px 0px 468px ;
+    color: white;
+    background-color: rgba(0, 30, 255, 0.933);
+    font-size: 1.5rem;
+    padding: 0px 20px 0px 20px;
+    border-radius: 20px 20px 0px 0px;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+.logbtn::before,.logbtn::after{
+    position: absolute;
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 0px 0px 20px 0px;
+    left: -10.8%;
+    top: 60%;
+    box-shadow: 5px 1.2px 0px 0px  rgba(0, 30, 255, 0.933);
+}
+.logbtn::after{
+    left: 100%;
+    border-radius: 0px 0px 0px 20px;
+    box-shadow: -5px 1.3px 0px 0px  rgba(0, 30, 255, 0.933);
+}
+.logbtn {
+    display: block;
+    margin: 310px 0px 0px 466px ;
+}
+.regset {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .wrapper {
+        width: 90%;
+        height: 80%;
+        top: 10%;
+        left: 5%;
+        transform: translate(0%, 10%);
+    }
+    .poster {
+        width: 100%;
+        height: 100%;
+    }
+    .logoset{
+        margin: 100px 0px ;
+    }
+    .loginset, .regset {
+        width: 100%;
+        padding: 10px;
+    }
+    .pic {
+        display: none;
+    }
+    .heading, .reghead {
+        margin: 20px 0;
+    }
+    input {
+        width: 90%;
+    }
+    #show{
+        margin-top: 25px;
+    }
+    button {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .guidlines {
+        margin: 20px  50px auto;
+    }
+    .regbtn{
+        position: absolute;
+        margin: 160px 0px 0px 415px ;
+        color: white;
+        background-color: rgba(0, 30, 255, 0.933);
+        font-size: 1.5rem;
+        padding: 5px 20px 5px 20px;
+        border-radius: 20px 20px 0px 0px;
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+    .regbtn::before,.regbtn::after{
+        position: absolute;
+        content: ' ';
+        width: 10px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 0px 0px 20px 0px;
+        left: -8.5%;
+        top: 75%;
+        box-shadow: 5px 1px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .regbtn::after{
+        left: 100%;
+        border-radius: 0px 0px 0px 20px;
+        box-shadow: -5px 3px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn{
+        display: none;
+        position: absolute;
+        margin: 260px 0px 0px 468px ;
+        color: white;
+        background-color: rgba(0, 30, 255, 0.933);
+        font-size: 1.5rem;
+        padding: 0px 20px 0px 20px;
+        border-radius: 20px 20px 0px 0px;
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+    .logbtn::before,.logbtn::after{
+        position: absolute;
+        content: ' ';
+        width: 10px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 0px 0px 20px 0px;
+        left: -10.8%;
+        top: 60%;
+        box-shadow: 5px 1.2px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn::after{
+        left: 100%;
+        border-radius: 0px 0px 0px 20px;
+        box-shadow: -5px 1.3px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn {
+        display:none;
+        margin: 160px 0px 0px 422px ;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .reload {
+        font-size: 1.5rem;
+        padding: 10px 0;
+    }
+    .aictelogo {
+        width: 180px;
+    }
+    .wrapper {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        top: 10%;
+        left: 5%;
+        transform: translate(0%, 25%);
+    }
+    .poster {
+        width: 100%;
+        height: 250px;
+    }
+    .logoset{
+        margin: 50px 80px ;
+    }
+    .loginset, .regset {
+        width: 100%;
+        padding: 10px;
+    }
+    .pic {
+       display: none;
+    }
+    .heading, .reghead {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+    input {
+        width: 80%;
+    }
+    #show{
+        display: none;
+    }
+    button {
+        width: 90%;
+        margin: 10px auto;
+        font-size: 1.5rem;
+        height: 50px;
+    }
+    .guidlines {
+        margin: 15px 50px auto;
+        font-size: 1rem;
+    }
+    .update {
+        font-size: 1rem;
+    }
+    input{
+        height: 50px;
+        width: 400px;
+        font-size: 1.2rem;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 0;
+        font-style: normal;
+        margin: 10PX ;
+        padding: 0px 0px 0px 10px;
+        background: transparent;
+        border-radius: 30px;
+        border: 2px solid rgba(1, 1, 1, 0.542);
+    }
+    #phone::-webkit-inner-spin-button,#phone::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+    }
+    .regbtn{
+        position: absolute;
+        margin: 400px 0px 0px -45px ;
+        color: white;
+        background-color: rgba(0, 30, 255, 0.933);
+        font-size: 1.5rem;
+        padding: 5px 20px 5px 20px;
+        border-radius: 20px 20px 0px 0px;
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+    .regbtn::before,.regbtn::after{
+        position: absolute;
+        content: ' ';
+        width: 10px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 0px 0px 20px 0px;
+        left: -8.5%;
+        top: 75%;
+        box-shadow: 5px 1px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .regbtn::after{
+        left: 100%;
+        border-radius: 0px 0px 0px 20px;
+        box-shadow: -5px 3px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn{
+        display: none;
+        position: absolute;
+        margin: 260px 0px 0px 468px ;
+        color: white;
+        background-color: rgba(0, 30, 255, 0.933);
+        font-size: 1.5rem;
+        padding: 0px 20px 0px 20px;
+        border-radius: 20px 20px 0px 0px;
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+    .logbtn::before,.logbtn::after{
+        position: absolute;
+        content: ' ';
+        width: 10px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 0px 0px 20px 0px;
+        left: -10.8%;
+        top: 60%;
+        box-shadow: 5px 1.2px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn::after{
+        left: 100%;
+        border-radius: 0px 0px 0px 20px;
+        box-shadow: -5px 1.3px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn {
+        display: none;
+        margin: 400px 0 0 -35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reload {
+        font-size: 1.2rem;
+    }
+    .aictelogo {
+        width: 200px;
+    }
+    .wrapper {
+        width: 100%;
+        height: auto;
+        top: 20%;
+        left: 0;
+    }
+    .poster {
+        height: 200px;
+    }
+    .logoset{
+        margin: 10px 10px ;
+    }
+    .loginset, .regset {
+        padding: 5px;
+    }
+    .pic {
+        width: 80px;
+        height: 80px;
+    }
+    .heading, .reghead {
+        font-size: 1.2rem;
+    }
+    input {
+        width: 95%;
+    }
+    #show{
+        display: none;
+    }
+    button {
+        width: 95%;
+        font-size: 1.2rem;
+        height: 45px;
+    }
+    .guidlines {
+        font-size: 1.2rem;
+    }
+    .update {
+        font-size: 0.8rem;
+    }
+    .regbtn{
+        position: absolute;
+        margin: 335px 0px 0px -45px ;
+        color: white;
+        background-color: rgba(0, 30, 255, 0.933);
+        font-size: 1.5rem;
+        padding: 5px 20px 5px 20px;
+        border-radius: 20px 20px 0px 0px;
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+    .regbtn::before,.regbtn::after{
+        position: absolute;
+        content: ' ';
+        width: 10px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 0px 0px 20px 0px;
+        left: -8.5%;
+        top: 75%;
+        box-shadow: 5px 1px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .regbtn::after{
+        left: 100%;
+        border-radius: 0px 0px 0px 20px;
+        box-shadow: -5px 3px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn{
+        display: none;
+        position: absolute;
+        margin: 260px 0px 0px 468px ;
+        color: white;
+        background-color: rgba(0, 30, 255, 0.933);
+        font-size: 1.5rem;
+        padding: 0px 20px 0px 20px;
+        border-radius: 20px 20px 0px 0px;
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+    .logbtn::before,.logbtn::after{
+        position: absolute;
+        content: ' ';
+        width: 10px;
+        height: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 0px 0px 20px 0px;
+        left: -10.8%;
+        top: 60%;
+        box-shadow: 5px 1.2px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn::after{
+        left: 100%;
+        border-radius: 0px 0px 0px 20px;
+        box-shadow: -5px 1.3px 0px 0px  rgba(0, 30, 255, 0.933);
+    }
+    .logbtn {
+        display:none;
+        margin: 335px 0px 0px -35px ;
+    }
+}
