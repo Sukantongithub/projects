@@ -43,8 +43,6 @@
         </nav>
 
         <div class="content">
-            
-            <!-- Profile Section -->
             <div id="profile-section" class="section">
               <h1>My Profile</h1>
                 <div class="profile-section">
@@ -77,16 +75,13 @@
                 </div>
             </div>
 
-            <!-- Application Section -->
             <div id="application-section" class="section" style="display: none;">
                 <h1>Application Form</h1>
                 <div class="application-section">
                     <form id="application-form">
-                        <!-- Aadhar Number at the top -->
                         <label for="aadhar">Aadhar Number:</label>
                         <input type="text" id="aadhar" name="aadhar" required>
 
-                        <!-- New Fields -->
                         <label for="first-name">First Name:</label>
                         <input type="text" id="first-name" name="first-name" required>
 
@@ -108,11 +103,9 @@
                         <label for="community-certificate">Community Certificate Number:</label>
                         <input type="text" id="community-certificate" name="community-certificate" required>
 
-                        <!-- 12th Mark with a minimum of 60% requirement -->
                         <label for="marks">12th Marks (Minimum 60% required):</label>
                         <input type="number" id="marks" name="marks" min="60" max="100" required>
 
-                        <!-- Existing Fields -->
                         <label for="mark-certificate">12th Mark Certificate:</label>
                         <input type="file" id="mark-certificate" name="mark-certificate" accept=".pdf, .jpg, .png" required>
 
@@ -122,14 +115,12 @@
                         <label for="bank-account">Bank Account Number:</label>
                         <input type="text" id="bank-account" name="bank-account" required>
 
-                        <!-- Non-commissioned details -->
                         <label for="non-commissioned">Are you a child of a Non-commissioned Officer?</label>
                         <select id="non-commissioned" name="non-commissioned" onchange="toggleExtraDetails()" required>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
 
-                        <!-- Extra details section -->
                         <div id="extra-details" style="display: none;">
                             <label for="rank">Rank:</label>
                             <input type="text" id="rank" name="rank">
@@ -146,13 +137,11 @@
                 </div>
             </div>
 
-            <!-- Status Section -->
             <div id="status-section" class="section" style="display: none;">
                 <h1>Status</h1>
                 <p>Track your application status here.</p>
             </div>
 
-            <!-- Settings Section -->
             <div id="settings-section" class="section" style="display: none;">
                 <h1>Settings</h1>
                 <form id="settings-form">

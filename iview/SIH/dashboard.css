@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +6,9 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: #f4f4f4; /* Added background color for body */
+    background-color: #f4f4f4;
 }
 
-/* Header */
 header {
     width: 100%;
     background-color: rgb(255, 145, 0);
@@ -42,10 +40,9 @@ header {
     width: 100px;
 }
 
-/* Main Container */
 .main-container {
     display: flex;
-    margin-top: 60px; /* Adjust margin to account for the fixed header */
+    margin-top: 60px; 
     height: calc(100vh - 60px);
 }
 
@@ -58,7 +55,7 @@ header {
     align-items: center;
     padding-top: 20px;
     position: fixed;
-    top: 60px; /* Start below the fixed header */
+    top: 60px; 
     left: 0;
     z-index: 1000;
     overflow-y: auto;
@@ -96,14 +93,12 @@ header {
 }
 
 .content {
-    margin-left: 20%; /* Account for the fixed sidebar width */
+    margin-left: 20%; 
     width: 80%;
     padding: 20px;
     background-color: #f4f4f4;
-    overflow-y: auto; /* Added for scrolling content */
-}
+    overflow-y: auto; 
 
-/* Profile Section */
 .profile-section,
 .settings-section,
 .application-section {
@@ -115,8 +110,8 @@ header {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px; /* Increased width for more spacious forms */
-    margin-bottom: 20px; /* Added spacing between sections */
+    max-width: 600px;
+    margin-bottom: 20px; 
 }
 
 .profile-section .profile-pic {
@@ -140,10 +135,9 @@ header {
     font-weight: bold;
 }
 
-/* Form Styles */
 form {
     width: 100%;
-    max-width: 500px; /* Increased max-width for wider forms */
+    max-width: 500px; 
     display: flex;
     flex-direction: column;
 }
@@ -160,7 +154,7 @@ form textarea {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f4f4f4; /* Uniform background for inputs */
+    background-color: #f4f4f4; 
 }
 
 form input:focus,
@@ -168,7 +162,7 @@ form select:focus,
 form textarea:focus {
     border-color: rgb(255, 145, 0);
     outline: none;
-    box-shadow: 0 0 5px rgba(255, 145, 0, 0.5); /* Added focus effect */
+    box-shadow: 0 0 5px rgba(255, 145, 0, 0.5); 
 }
 
 form button {
@@ -180,7 +174,7 @@ form button {
     cursor: pointer;
     border-radius: 4px;
     width: 100%;
-    transition: background-color 0.3s ease; /* Smooth button color transition */
+    transition: background-color 0.3s ease; 
 }
 
 form button:hover {
@@ -190,27 +184,26 @@ form button:hover {
 form input[type="file"] {
     border: none;
     background-color: #fff;
-    padding: 8px; /* Adjusted padding for file inputs */
+    padding: 8px; 
 }
 
 form select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: #fff; /* Improved appearance for dropdowns */
+    background-color: #fff; 
 }
 
 form input[type="number"] {
-    -moz-appearance: textfield; /* Removes spinner in Firefox */
+    -moz-appearance: textfield;
 }
 
 form input[type="number"]::-webkit-outer-spin-button,
 form input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0; /* Removes spinner in Chrome */
+    margin: 0; 
 }
 
-/* Additional Classes */
 .note {
     font-size: 0.9rem;
     color: #555;
@@ -218,7 +211,6 @@ form input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: 15px;
 }
 
-/* Settings Section */
 .settings-section input[type="password"],
 .settings-section input[type="checkbox"] {
     padding: 10px;
